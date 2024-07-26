@@ -1,31 +1,107 @@
-# React + TypeScript + Vite
+# Global State Hook
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project provides a custom React hook for managing global state in React applications. It simplifies state management by allowing you to create and use global state without the need for external libraries like Redux.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Simple and lightweight global state management
+- Create and use global state with ease
+- Easy integration with React components
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-- Configure the top-level `parserOptions` property like this:
+### Prerequisites
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Make sure you have the following software installed:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-# global-state-hook
+- Node.js
+- npm (Node Package Manager)
+
+### Installation
+
+1. Clone the repository to your local machine:
+
+    ```bash
+    git clone https://github.com/BillyND/global-state-hook.git
+    ```
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd global-state-hook
+    ```
+
+3. Install the necessary packages:
+
+    ```bash
+    npm i
+    ```
+
+### Using the Hook
+
+1. Import the `useGlobalState` hook into your React components:
+
+    ```javascript
+    import { useGlobalState } from './path-to-hook';
+    ```
+
+2. Create and manage global state using the hook:
+
+    ```javascript
+    const [state, setState] = useGlobalState('initialValue');
+    ```
+
+3. Use the `state` and `setState` as needed in your components.
+
+### Running the Project
+
+1. To start the development server, run:
+
+    ```bash
+    npm start
+    ```
+
+2. Open your browser and navigate to `http://localhost:3000` to view and test the app.
+
+### Building for Production
+
+1. To build the application for production, run:
+
+    ```bash
+    npm run build
+    ```
+
+2. To serve the production build, you can use a static server like `serve`:
+
+    ```bash
+    npm install -g serve
+    serve -s build
+    ```
+
+## Built With
+
+- [React.js](https://reactjs.org/) - JavaScript library for building user interfaces
+- [Node.js](https://nodejs.org/) - JavaScript runtime
+- [npm](https://www.npmjs.com/) - Package manager
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Authors
+
+- **BillyND** - *Initial work* - [BillyND's GitHub Profile](https://github.com/BillyND)
+
+See also the list of [contributors](https://github.com/BillyND/global-state-hook/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc.
